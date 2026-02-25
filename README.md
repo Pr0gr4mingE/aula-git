@@ -1,3 +1,11 @@
-[main (root-commit) 2c287fb] initial commit in main
- 1 file changed, 9 insertions(+)
- create mode 100644 README.md
+On branch taskrookie01
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
