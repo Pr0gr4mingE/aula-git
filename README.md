@@ -1,11 +1,2 @@
-On branch taskrookie01
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   README.md
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	index.html
-
-no changes added to commit (use "git add" and/or "git commit -a")
+[taskrookie01 9cc2ae6] initial commit in taskrookie01
+ 1 file changed, 11 insertions(+), 3 deletions(-)
