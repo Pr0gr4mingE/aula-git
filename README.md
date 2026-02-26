@@ -1,2 +1,7 @@
-[taskrookie01 9cc2ae6] initial commit in taskrookie01
- 1 file changed, 11 insertions(+), 3 deletions(-)
+On branch develop
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
