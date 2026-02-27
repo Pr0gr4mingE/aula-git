@@ -1,0 +1,157 @@
+/* =========================
+   RESET BÁSICO
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* inclui bordas e padding na largura total dos elementos */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh; /* garante que o body ocupe toda a altura da tela   */
+}
+
+
+/* =========================
+   GRID - ESTRUTURA PRINCIPAL
+   (Aplicado direto no body)
+========================= */
+
+body {
+    display: grid;
+
+    grid-template-columns: 220px 1fr; /* 220px para a sidebar e o restante para o main */
+    grid-template-rows: 80px 1fr 60px; /* 80px para o header, o restante para o main e 60px para o footer */
+
+    grid-template-areas: /* define as áreas do grid */
+        "header header"
+        "sidebar main"
+        "footer footer";
+}
+
+
+/* =========================
+   ÁREAS DO GRID
+========================= */
+
+header {
+    grid-area: header;
+    background-color: #1e293b;
+    color: white;
+
+    display: flex; /* FLEXBOX PARA CENTRALIZAR O CONTEÚDO DO HEADER */
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    grid-area: sidebar;
+    background-color: #334155;
+    color: white;
+    padding: 20px;
+}
+
+main {
+    grid-area: main;
+    background-color: #f1f5f9;
+    padding: 20px;
+
+    /* GRID INTERNO PARA OS CARDS */
+    display: grid; /* GRID PARA OS CARDS DENTRO DO MAIN */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));/* 3 colunas de no mínimo 220px, se não couber vira 2 ou 1 */
+    gap: 20px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #1e293b;
+    color: white;
+
+    display: flex; /* FLEXBOX PARA CENTRALIZAR O CONTEÚDO DO FOOTER */
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   MENU LATERAL
+========================= */
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+nav li:hover {
+    text-decoration:#fbfbfc underline;
+}
+
+
+/* =========================
+   FLEXBOX - ESTRUTURA DOS CARDS
+========================= */
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    /* FLEXBOX AQUI */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 20px;
+    flex-grow: 1; /* ocupa o espaço disponível */
+}
+
+.card button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px auto 1fr 60px;
+
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    nav {
+        text-align: center;
+    }
+}
